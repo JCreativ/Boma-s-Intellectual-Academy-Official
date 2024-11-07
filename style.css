@@ -1,0 +1,586 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    color: black;
+    background-image: url('your-background.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    opacity: 0.95;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+header {
+    background-color: red;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    color: black;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: red;
+    font-weight: bold;
+}
+
+.hero {
+    background-color: white; 
+    padding: 50px 0;
+    text-align: center;
+}
+
+.hero h2 {
+    color: red;
+    font-size: 2.5rem;
+}
+
+.hero p {
+    margin: 20px 0;
+}
+
+.btn {
+    background-color: red;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+#about, #courses, #contact, #proof {
+    padding: 50px 0;
+    text-align: center;
+}
+
+#about h2, #courses h2, #contact h2, #proof h2 {
+    color: red;
+    margin-bottom: 20px;
+}
+
+
+.proof-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+
+
+.ceo-description {
+    max-width: 50rem;
+    text-align: left;
+}
+
+
+section {
+    background-color: rgba(255, 255, 255, 0.8); 
+    padding: 20px;
+    border-radius: 10px;
+}
+
+footer {
+    background-color: black;
+    color: red;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer p {
+    margin: 0;
+}
+
+
+
+
+
+
+
+.ad-banner {
+    background-color: lightblue; /* Change as needed */
+    padding: 20px;
+    text-align: center;
+    margin: 20px 0; /* Adds space around the ad section */
+    border-radius: 10px; /* Rounds the corners */
+}
+
+.ad-banner h2 {
+    color: red;
+}
+
+.ad-banner .ad-image {
+    max-width: 80%; 
+    height: auto;
+}
+
+.ad-banner .btn {
+    background-color: red;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size:1rem;
+}
+
+
+
+#contact {
+    background-color: white;
+    padding: 40px;
+    text-align: center;
+    margin: 20px 0;
+    border-radius: 15px;
+    box-shadow: 0 7px 30px rgba(0, 0, 0, 0.1);
+}
+
+#contact h2 {
+    color: red;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 30px; /* Space between fields */
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px  solid #ccc;
+    border-radius: 15px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: red;
+    outline: none;
+}
+
+.form-group label {
+    position: absolute;
+    left: 15px;
+    top: 15px;
+    color: #999;
+    transition: 0.2s ease all;
+    pointer-events: none; /* Prevents label from interfering with input click */
+}
+
+.form-group input:focus + label,
+.form-group input:not(:placeholder-shown) + label,
+.form-group textarea:focus + label,
+.form-group textarea:not(:placeholder-shown) + label {
+    top: -10px; /* Moves label above the input */
+    left: 15px;
+    font-size: 12px;
+    color: red; /* Change color when label moves */
+}
+
+.contact-option {
+    margin-top: 20px;
+}
+
+.contact-option p {
+    margin-bottom: 10px;
+}
+
+.contact-option .btn {
+    background-color: red;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.contact-option .btn:hover {
+    background-color: darkred;
+}
+
+
+
+
+
+
+
+
+
+.success-message {
+    margin-top: 20px;
+    color: green;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    opacity: 0; /* Start invisible */
+    transition: opacity 0.5s ease;
+}
+
+.success-message.visible {
+    opacity: 1; /* Fade in effect */
+}
+
+.checkmark {
+    font-size: 24px; /* Size of the checkmark */
+    margin-right: 10px; /* Space between checkmark and text */
+    animation: checkmark-animation 0.5s ease;
+}
+
+@keyframes checkmark-animation {
+    0% {
+        transform: scale(0);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+#ceo-image{
+  width: 50%;
+  height: auto;
+}
+
+
+
+
+
+
+
+/* Initial state for all sections */
+section {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Class to fade in */
+.fade-in {
+    opacity: 1;
+}
+
+/* Class to fade out */
+.fade-out {
+    opacity: 0;
+}
+
+
+
+
+
+.carousel-container {
+  position: relative;
+  max-width: 100%;
+  margin: auto;
+  overflow: hidden;
+}
+
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.prev {
+  left: 0;
+}
+
+.next {
+  right: 0;
+}
+
+
+
+
+
+
+
+
+.slider {
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  position: relative;
+}
+
+.slides {
+  display: flex;
+  width: 300%; /* Number of images times 100% */
+  height: 100%;
+  animation: slide 29s infinite;
+}
+
+.slides img {
+  width: 100%;
+  height: 100%;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0%);
+  }
+  33% {
+    transform: translateX(-100%);
+  }
+  66% {
+    transform: translateX(-200%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+.content, .more-content {
+  padding: 20px;
+}
+
+.slider-container {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  margin: 20px auto;
+  background-color: #333;
+}
+
+.fade-slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.slider-active {
+  opacity: 1;
+}
+
+/* First Slider Images */
+.fade-slide1 {
+  background-image: url('1.jpg');
+}
+
+.fade-slide2 {
+  background-image: url('2.jpg');
+}
+
+.fade-slide3 {
+  background-image: url('3.jpg');
+}
+
+.fade-slide4 {
+  background-image: url('4.jpg');
+}
+
+.fade-slide5 {
+  background-image: url('5.jpg');
+}
+
+.fade-slide6 {
+  background-image: url('6.jpg');
+}
+
+.fade-slide7 {
+  background-image: url('7.jpg');
+}
+
+.fade-slide8 {
+  background-image: url('8.jpg');
+}
+
+.fade-slide9 {
+  background-image: url('9.jpg');
+}
+
+.fade-slide10 {
+  background-image: url('10.jpg');
+}
+
+.fade-slide11 {
+  background-image: url('11.jpg');
+}
+
+.fade-slide12 {
+  background-image: url('12.jpg');
+}
+
+.fade-slide13 {
+  background-image: url('13.jpg');
+}
+
+.fade-slide14 {
+  background-image: url('14.jpg');
+}
+
+.fade-slide15 {
+  background-image: url('15.jpg');
+}
+
+.fade-slide16 {
+  background-image: url('16.jpg');
+}
+
+.fade-slide17 {
+  background-image: url('17.jpg');
+}
+
+.fade-slide18 {
+  background-image: url('18.jpg');
+}
+
+.fade-slide19 {
+  background-image: url('19.jpg');
+}
+
+.fade-slide20 {
+  background-image: url('20.jpg');
+}
+
+.fade-slide21 {
+  background-image: url('21.jpg');
+}
+
+.fade-slide22 {
+  background-image: url('22.jpg');
+}
+
+.fade-slide23 {
+  background-image: url('23.jpg');
+}
+
+.fade-slide24 {
+  background-image: url('24.jpg');
+}
+
+
+
+
+
+
+
+
+
+
+#independent-slider {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+}
+
+.independent-slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.independent-slide.active {
+  opacity: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
